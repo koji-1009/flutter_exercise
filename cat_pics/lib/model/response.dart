@@ -5,6 +5,16 @@ part 'response.freezed.dart';
 part 'response.g.dart';
 
 @freezed
+class TagList with _$TagList {
+  const factory TagList({
+    required List<String> tags,
+  }) = _TagList;
+
+  factory TagList.fromJson(Map<String, dynamic> json) =>
+      _$TagListFromJson(json);
+}
+
+@freezed
 class CatList with _$CatList {
   const factory CatList({
     required List<Cat> cats,

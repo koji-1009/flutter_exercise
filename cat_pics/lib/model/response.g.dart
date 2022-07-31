@@ -6,6 +6,23 @@ part of 'response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_TagList _$$_TagListFromJson(Map<String, dynamic> json) => $checkedCreate(
+      r'_$_TagList',
+      json,
+      ($checkedConvert) {
+        final val = _$_TagList(
+          tags: $checkedConvert('tags',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+        );
+        return val;
+      },
+    );
+
+Map<String, dynamic> _$$_TagListToJson(_$_TagList instance) =>
+    <String, dynamic>{
+      'tags': instance.tags,
+    };
+
 _$_CatList _$$_CatListFromJson(Map<String, dynamic> json) => $checkedCreate(
       r'_$_CatList',
       json,

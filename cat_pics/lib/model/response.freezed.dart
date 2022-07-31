@@ -14,6 +14,145 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+TagList _$TagListFromJson(Map<String, dynamic> json) {
+  return _TagList.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TagList {
+  List<String> get tags => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TagListCopyWith<TagList> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TagListCopyWith<$Res> {
+  factory $TagListCopyWith(TagList value, $Res Function(TagList) then) =
+      _$TagListCopyWithImpl<$Res>;
+  $Res call({List<String> tags});
+}
+
+/// @nodoc
+class _$TagListCopyWithImpl<$Res> implements $TagListCopyWith<$Res> {
+  _$TagListCopyWithImpl(this._value, this._then);
+
+  final TagList _value;
+  // ignore: unused_field
+  final $Res Function(TagList) _then;
+
+  @override
+  $Res call({
+    Object? tags = freezed,
+  }) {
+    return _then(_value.copyWith(
+      tags: tags == freezed
+          ? _value.tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_TagListCopyWith<$Res> implements $TagListCopyWith<$Res> {
+  factory _$$_TagListCopyWith(
+          _$_TagList value, $Res Function(_$_TagList) then) =
+      __$$_TagListCopyWithImpl<$Res>;
+  @override
+  $Res call({List<String> tags});
+}
+
+/// @nodoc
+class __$$_TagListCopyWithImpl<$Res> extends _$TagListCopyWithImpl<$Res>
+    implements _$$_TagListCopyWith<$Res> {
+  __$$_TagListCopyWithImpl(_$_TagList _value, $Res Function(_$_TagList) _then)
+      : super(_value, (v) => _then(v as _$_TagList));
+
+  @override
+  _$_TagList get _value => super._value as _$_TagList;
+
+  @override
+  $Res call({
+    Object? tags = freezed,
+  }) {
+    return _then(_$_TagList(
+      tags: tags == freezed
+          ? _value._tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TagList with DiagnosticableTreeMixin implements _TagList {
+  const _$_TagList({required final List<String> tags}) : _tags = tags;
+
+  factory _$_TagList.fromJson(Map<String, dynamic> json) =>
+      _$$_TagListFromJson(json);
+
+  final List<String> _tags;
+  @override
+  List<String> get tags {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tags);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'TagList(tags: $tags)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TagList'))
+      ..add(DiagnosticsProperty('tags', tags));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TagList &&
+            const DeepCollectionEquality().equals(other._tags, _tags));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_tags));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TagListCopyWith<_$_TagList> get copyWith =>
+      __$$_TagListCopyWithImpl<_$_TagList>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TagListToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TagList implements TagList {
+  const factory _TagList({required final List<String> tags}) = _$_TagList;
+
+  factory _TagList.fromJson(Map<String, dynamic> json) = _$_TagList.fromJson;
+
+  @override
+  List<String> get tags;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TagListCopyWith<_$_TagList> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 CatList _$CatListFromJson(Map<String, dynamic> json) {
   return _CatList.fromJson(json);
 }
