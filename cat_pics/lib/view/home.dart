@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  static const String routeName = '/';
+
   @override
   Widget build(BuildContext context) {
     final service = context.watch<CataasService>();
