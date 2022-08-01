@@ -34,3 +34,7 @@ class Cat with _$Cat {
 
   factory Cat.fromJson(Map<String, dynamic> json) => _$CatFromJson(json);
 }
+
+extension CatExt on Cat {
+  String get imageUrl => 'https://cataas.com/cat/$id';
+}
