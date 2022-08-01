@@ -2,7 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cat_pics/logic/cataas_service.dart';
 import 'package:cat_pics/logic/select_state_notifier.dart';
 import 'package:cat_pics/model/response.dart';
-import 'package:cat_pics/view/select.dart';
+import 'package:cat_pics/view/tag.dart';
+import 'package:cat_pics/view/tag_select.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.tag),
             onPressed: () {
-              Navigator.of(context).pushNamed(SelectPage.routeName);
+              Navigator.of(context).pushNamed(TagSelectPage.routeName);
             },
           ),
         ],
@@ -55,9 +56,16 @@ class HomePage extends StatelessWidget {
                     Wrap(
                       children: [
                         ...cat.tags.map(
-                          (e) => TextButton(
-                            onPressed: () {},
-                            child: Text(e),
+                          (tag) => TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pushNamed(
+                                TagPage.routeName,
+                                arguments: TagPageArgs(
+                                  tag: tag,
+                                ),
+                              );
+                            },
+                            child: Text(tag),
                           ),
                         ),
                       ],

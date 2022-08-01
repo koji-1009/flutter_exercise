@@ -4,8 +4,8 @@ import 'package:cat_pics/model/response.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class SelectPage extends StatelessWidget {
-  const SelectPage({super.key});
+class TagSelectPage extends StatelessWidget {
+  const TagSelectPage({super.key});
 
   static const routeName = '/select';
 
