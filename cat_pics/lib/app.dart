@@ -12,7 +12,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Cat Pics',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        brightness: Brightness.light,
+        colorSchemeSeed: Colors.blue,
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        colorSchemeSeed: Colors.blue,
       ),
       home: Provider(
         create: (_) => CataasService(
