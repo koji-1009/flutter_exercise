@@ -10,26 +10,26 @@ class CataasService {
 
   final http.Client client;
 
-  Future<CatList> tags() async {
+  Future<TagList> tags() async {
     final uri = Uri.https(
       'cataas.com',
       'api/tags',
     );
     final response = await client.get(uri);
 
-    return CatList.fromJson({
+    return TagList.fromJson({
       'tags': jsonDecode(response.body),
     });
   }
 
   Future<CatList> cats({
-    List<String> tags = const [],
+    required List<String> tags,
   }) async {
     final uri = Uri.https(
       'cataas.com',
       'api/cats',
       {
-        'tags': tags,
+        'tags': tags.join(','),
       },
     );
     final response = await client.get(uri);
