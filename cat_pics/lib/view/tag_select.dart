@@ -1,3 +1,4 @@
+import 'package:breakpoints_mq/breakpoints_mq.dart';
 import 'package:cat_pics/logic/cataas_service.dart';
 import 'package:cat_pics/logic/select_state_notifier.dart';
 import 'package:cat_pics/model/response.dart';
@@ -11,6 +12,8 @@ class TagSelectPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final margin = MediaQuery.of(context).breakpointMargin;
+
     final service = context.watch<CataasService>();
     final selectedTags = context.select<SelectStateNotifier, List<String>>(
       (notifier) => notifier.value,
@@ -41,6 +44,9 @@ class TagSelectPage extends StatelessWidget {
               }
 
               return CheckboxListTile(
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: margin,
+                ),
                 title: Text(tag),
                 value: selectedTags.contains(tag),
                 onChanged: (newValue) {
