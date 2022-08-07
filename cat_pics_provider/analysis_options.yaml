@@ -29,5 +29,7 @@ linter:
 # https://dart.dev/guides/language/analysis-options
 
 analyzer:
+  exclude:
+    - "**/*.g.dart"
   errors:
     invalid_annotation_target: ignore
