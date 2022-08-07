@@ -1,4 +1,4 @@
-import 'package:cat_pics_riverpod/home.dart';
+import 'package:cat_pics_riverpod/view/home.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {

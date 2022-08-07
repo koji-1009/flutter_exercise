@@ -5,29 +5,27 @@ import 'package:cat_pics_riverpod/model/response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
+class TagPage extends ConsumerWidget {
+  const TagPage({
+    super.key,
+    required this.tag,
+  });
 
-  static const String routeName = '/';
+  final String tag;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final margin = MediaQuery.of(context).breakpointMargin;
+
     final service = ref.watch(cataasServiceProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cats'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.tag),
-            onPressed: () {},
-          ),
-        ],
+        title: Text('Tag = $tag'),
       ),
       body: FutureBuilder<CatList>(
         future: service.cats(
-          tags: const [],
+          tags: [tag],
         ),
         builder: (context, snapshot) {
           final data = snapshot.data;
@@ -46,33 +44,18 @@ class HomePage extends ConsumerWidget {
                   horizontal: margin,
                 ),
                 child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Column(
-                      children: [
-                        CachedNetworkImage(
-                          imageUrl: cat.imageUrl,
-                          placeholder: (_, __) => const Center(
-                            child: SizedBox.square(
-                              dimension: 120,
-                              child: CircularProgressIndicator.adaptive(),
-                            ),
+                  child: IntrinsicHeight(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: CachedNetworkImage(
+                        imageUrl: cat.imageUrl,
+                        placeholder: (_, __) => const SizedBox.square(
+                          dimension: 120,
+                          child: Center(
+                            child: CircularProgressIndicator.adaptive(),
                           ),
                         ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Wrap(
-                          children: [
-                            ...cat.tags.map(
-                              (tag) => TextButton(
-                                onPressed: () {},
-                                child: Text(tag),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
