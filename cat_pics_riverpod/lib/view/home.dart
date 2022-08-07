@@ -5,6 +5,7 @@ import 'package:cat_pics_riverpod/logic/select_state.dart';
 import 'package:cat_pics_riverpod/model/response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -22,7 +23,9 @@ class HomePage extends ConsumerWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.tag),
-            onPressed: () {},
+            onPressed: () {
+              context.push('/select');
+            },
           ),
         ],
       ),
@@ -67,7 +70,9 @@ class HomePage extends ConsumerWidget {
                           children: [
                             ...cat.tags.map(
                               (tag) => TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  context.push('/tag?key=$tag');
+                                },
                                 child: Text(tag),
                               ),
                             ),
