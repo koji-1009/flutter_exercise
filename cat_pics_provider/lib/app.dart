@@ -1,5 +1,7 @@
 import 'package:cat_pics_provider/logic/cataas_service.dart';
-import 'package:cat_pics_provider/logic/select_state_notifier.dart';
+import 'package:cat_pics_provider/logic/home_tab_state.dart';
+import 'package:cat_pics_provider/logic/select_tags_notifier.dart';
+import 'package:cat_pics_provider/logic/cats_by_tabs_notifier.dart';
 import 'package:cat_pics_provider/view/error.dart';
 import 'package:cat_pics_provider/view/home.dart';
 import 'package:cat_pics_provider/view/tag.dart';
@@ -20,8 +22,26 @@ class App extends StatelessWidget {
             client: http.Client(),
           ),
         ),
-        ChangeNotifierProvider<SelectStateNotifier>(
-          create: (_) => SelectStateNotifier(),
+        ChangeNotifierProvider(
+          create: (_) => HomeTabState(),
+        ),
+        ChangeNotifierProvider<SelectTagsNotifier>(
+          create: (_) => SelectTagsNotifier(),
+        ),
+        ChangeNotifierProxyProvider<SelectTagsNotifier, CatsByTagsNotifier>(
+          create: (ref) {
+            final service = ref.read<CataasService>();
+            final tags = ref.read<SelectTagsNotifier>().value;
+
+            return CatsByTagsNotifier(
+              service: service,
+              tags: tags,
+            );
+          },
+          update: (_, value, previous) => previous!
+            ..update(
+              tags: value.value,
+            ),
         ),
       ],
       child: MaterialApp(
