@@ -1,6 +1,6 @@
 import 'package:breakpoints_mq/breakpoints_mq.dart';
 import 'package:cat_pics_provider/logic/cataas_service.dart';
-import 'package:cat_pics_provider/logic/select_state_notifier.dart';
+import 'package:cat_pics_provider/logic/select_tags_notifier.dart';
 import 'package:cat_pics_provider/model/response.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +15,7 @@ class TagSelectPage extends StatelessWidget {
     final margin = MediaQuery.of(context).breakpointMargin;
 
     final service = context.watch<CataasService>();
-    final selectedTags = context.select<SelectStateNotifier, List<String>>(
+    final selectedTags = context.select<SelectTagsNotifier, List<String>>(
       (notifier) => notifier.value,
     );
 
@@ -51,12 +51,12 @@ class TagSelectPage extends StatelessWidget {
                 value: selectedTags.contains(tag),
                 onChanged: (newValue) {
                   if (newValue ?? false) {
-                    context.read<SelectStateNotifier>().update(
-                      newList: [...selectedTags, tag],
+                    context.read<SelectTagsNotifier>().update(
+                      tags: [...selectedTags, tag],
                     );
                   } else {
-                    context.read<SelectStateNotifier>().update(
-                      newList: [...selectedTags.where((e) => e != tag)],
+                    context.read<SelectTagsNotifier>().update(
+                      tags: [...selectedTags.where((e) => e != tag)],
                     );
                   }
                 },
