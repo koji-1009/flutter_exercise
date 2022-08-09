@@ -54,16 +54,14 @@ class TagPage extends StatelessWidget {
                   horizontal: margin,
                 ),
                 child: Card(
-                  child: IntrinsicHeight(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: CachedNetworkImage(
-                        imageUrl: cat.imageUrl,
-                        placeholder: (_, __) => const SizedBox.square(
-                          dimension: 120,
-                          child: Center(
-                            child: CircularProgressIndicator.adaptive(),
-                          ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: CachedNetworkImage(
+                      imageUrl: cat.imageUrl,
+                      placeholder: (_, __) => const SizedBox.square(
+                        dimension: 120,
+                        child: Center(
+                          child: CircularProgressIndicator.adaptive(),
                         ),
                       ),
                     ),

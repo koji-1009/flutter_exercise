@@ -56,9 +56,9 @@ class HomePage extends ConsumerWidget {
                       children: [
                         CachedNetworkImage(
                           imageUrl: cat.imageUrl,
-                          placeholder: (_, __) => const Center(
-                            child: SizedBox.square(
-                              dimension: 120,
+                          placeholder: (_, __) => const SizedBox.square(
+                            dimension: 120,
+                            child: Center(
                               child: CircularProgressIndicator.adaptive(),
                             ),
                           ),
