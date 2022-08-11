@@ -3,8 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cat_pics_riverpod_hooks/logic/cats_by_tags.dart';
 import 'package:cat_pics_riverpod_hooks/model/response.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomeFutureProviderWidget extends ConsumerWidget {
   const HomeFutureProviderWidget({super.key});
