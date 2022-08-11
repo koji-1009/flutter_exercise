@@ -4,9 +4,11 @@ import 'package:cat_pics_stateful/model/response.dart';
 import 'package:http/http.dart' as http;
 
 class CataasService {
-  CataasService();
+  const CataasService({
+    required this.client,
+  });
 
-  final http.Client client = http.Client();
+  final http.Client client;
 
   Future<TagList> tags() async {
     final uri = Uri.https(
