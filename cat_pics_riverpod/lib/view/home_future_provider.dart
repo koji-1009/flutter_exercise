@@ -12,6 +12,7 @@ class HomeFutureProviderWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final margin = MediaQuery.of(context).breakpointMargin;
+
     final future = ref.watch(catsByTagsProvider);
 
     return future.when(
