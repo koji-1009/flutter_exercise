@@ -1,6 +1,6 @@
 import 'package:breakpoints_mq/breakpoints_mq.dart';
 import 'package:cat_pics_riverpod/logic/cataas_service.dart';
-import 'package:cat_pics_riverpod/logic/select_state.dart';
+import 'package:cat_pics_riverpod/logic/select_tags.dart';
 import 'package:cat_pics_riverpod/model/response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -13,7 +13,7 @@ class TagSelectPage extends ConsumerWidget {
     final margin = MediaQuery.of(context).breakpointMargin;
 
     final service = ref.watch(cataasServiceProvider);
-    final selectedTags = ref.watch(selectStateProvider);
+    final selectedTags = ref.watch(selectTagsProvider);
 
     return FutureBuilder<TagList>(
       future: service.tags(),
@@ -47,12 +47,12 @@ class TagSelectPage extends ConsumerWidget {
                 value: selectedTags.contains(tag),
                 onChanged: (newValue) {
                   if (newValue ?? false) {
-                    ref.read(selectStateProvider.notifier).state = [
+                    ref.read(selectTagsProvider.notifier).state = [
                       ...selectedTags,
                       tag
                     ];
                   } else {
-                    ref.read(selectStateProvider.notifier).state = [
+                    ref.read(selectTagsProvider.notifier).state = [
                       ...selectedTags.where((e) => e != tag),
                     ];
                   }

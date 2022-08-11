@@ -7,7 +7,7 @@ part 'response.g.dart';
 @freezed
 class TagList with _$TagList {
   const factory TagList({
-    required List<String> tags,
+    @Default([]) List<String> tags,
   }) = _TagList;
 
   factory TagList.fromJson(Map<String, dynamic> json) =>
@@ -17,7 +17,7 @@ class TagList with _$TagList {
 @freezed
 class CatList with _$CatList {
   const factory CatList({
-    required List<Cat> cats,
+    @Default([]) List<Cat> cats,
   }) = _CatList;
 
   factory CatList.fromJson(Map<String, dynamic> json) =>
