@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final selectStateProvider = StateProvider(
+final selectTagsProvider = StateProvider(
   (_) => const <String>[],
 );

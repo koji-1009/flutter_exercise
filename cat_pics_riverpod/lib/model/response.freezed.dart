@@ -89,13 +89,14 @@ class __$$_TagListCopyWithImpl<$Res> extends _$TagListCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TagList with DiagnosticableTreeMixin implements _TagList {
-  const _$_TagList({required final List<String> tags}) : _tags = tags;
+  const _$_TagList({final List<String> tags = const []}) : _tags = tags;
 
   factory _$_TagList.fromJson(Map<String, dynamic> json) =>
       _$$_TagListFromJson(json);
 
   final List<String> _tags;
   @override
+  @JsonKey()
   List<String> get tags {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tags);
@@ -141,7 +142,7 @@ class _$_TagList with DiagnosticableTreeMixin implements _TagList {
 }
 
 abstract class _TagList implements TagList {
-  const factory _TagList({required final List<String> tags}) = _$_TagList;
+  const factory _TagList({final List<String> tags}) = _$_TagList;
 
   factory _TagList.fromJson(Map<String, dynamic> json) = _$_TagList.fromJson;
 
@@ -228,13 +229,14 @@ class __$$_CatListCopyWithImpl<$Res> extends _$CatListCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CatList with DiagnosticableTreeMixin implements _CatList {
-  const _$_CatList({required final List<Cat> cats}) : _cats = cats;
+  const _$_CatList({final List<Cat> cats = const []}) : _cats = cats;
 
   factory _$_CatList.fromJson(Map<String, dynamic> json) =>
       _$$_CatListFromJson(json);
 
   final List<Cat> _cats;
   @override
+  @JsonKey()
   List<Cat> get cats {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cats);
@@ -280,7 +282,7 @@ class _$_CatList with DiagnosticableTreeMixin implements _CatList {
 }
 
 abstract class _CatList implements CatList {
-  const factory _CatList({required final List<Cat> cats}) = _$_CatList;
+  const factory _CatList({final List<Cat> cats}) = _$_CatList;
 
   factory _CatList.fromJson(Map<String, dynamic> json) = _$_CatList.fromJson;
 

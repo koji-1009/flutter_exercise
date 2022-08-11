@@ -11,8 +11,11 @@ _$_TagList _$$_TagListFromJson(Map<String, dynamic> json) => $checkedCreate(
       json,
       ($checkedConvert) {
         final val = _$_TagList(
-          tags: $checkedConvert('tags',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          tags: $checkedConvert(
+              'tags',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
         );
         return val;
       },
@@ -30,9 +33,11 @@ _$_CatList _$$_CatListFromJson(Map<String, dynamic> json) => $checkedCreate(
         final val = _$_CatList(
           cats: $checkedConvert(
               'cats',
-              (v) => (v as List<dynamic>)
-                  .map((e) => Cat.fromJson(e as Map<String, dynamic>))
-                  .toList()),
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => Cat.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
         );
         return val;
       },
