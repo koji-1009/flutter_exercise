@@ -8,7 +8,7 @@
 PRODUCT_NAME = cat_pics_provider
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.catPics
+PRODUCT_BUNDLE_IDENTIFIER = com.example.catPicsProvider
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.
