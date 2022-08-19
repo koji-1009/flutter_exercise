@@ -1,6 +1,6 @@
 # cat_pics_stateful
 
-A new Flutter project.
+StatefulWidget + Push style navigation.
 
 ## Getting Started
 
