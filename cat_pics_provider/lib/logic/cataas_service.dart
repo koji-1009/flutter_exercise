@@ -3,8 +3,12 @@ import 'dart:convert';
 import 'package:cat_pics_provider/model/response.dart';
 import 'package:http/http.dart' as http;
 
+const _authority = 'cataas.com';
+const _pathCats = 'api/cats';
+const _pathTags = 'api/tags';
+
 class CataasService {
-  CataasService({
+  const CataasService({
     required this.client,
   });
 
@@ -12,8 +16,8 @@ class CataasService {
 
   Future<TagList> tags() async {
     final uri = Uri.https(
-      'cataas.com',
-      'api/tags',
+      _authority,
+      _pathTags,
     );
     final response = await client.get(uri);
 
@@ -26,8 +30,8 @@ class CataasService {
     required List<String> tags,
   }) async {
     final uri = Uri.https(
-      'cataas.com',
-      'api/cats',
+      _authority,
+      _pathCats,
       {
         'tags': tags.join(','),
       },
