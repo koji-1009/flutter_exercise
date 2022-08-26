@@ -4,14 +4,12 @@ import 'package:cat_pics_riverpod/model/response.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
-final cataasServiceProvider = Provider(
-  (_) => CataasService(
-    client: http.Client(),
-  ),
-);
+const _authority = 'cataas.com';
+const _pathCats = 'api/cats';
+const _pathTags = 'api/tags';
 
 class CataasService {
-  CataasService({
+  const CataasService({
     required this.client,
   });
 
@@ -19,8 +17,8 @@ class CataasService {
 
   Future<TagList> tags() async {
     final uri = Uri.https(
-      'cataas.com',
-      'api/tags',
+      _authority,
+      _pathTags,
     );
     final response = await client.get(uri);
 
@@ -33,8 +31,8 @@ class CataasService {
     required List<String> tags,
   }) async {
     final uri = Uri.https(
-      'cataas.com',
-      'api/cats',
+      _authority,
+      _pathCats,
       {
         'tags': tags.join(','),
       },
