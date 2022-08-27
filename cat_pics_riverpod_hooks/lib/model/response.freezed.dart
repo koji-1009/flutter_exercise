@@ -23,7 +23,6 @@ mixin _$TagList {
   List<String> get tags => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $TagListCopyWith<TagList> get copyWith => throw _privateConstructorUsedError;
 }
@@ -32,7 +31,6 @@ mixin _$TagList {
 abstract class $TagListCopyWith<$Res> {
   factory $TagListCopyWith(TagList value, $Res Function(TagList) then) =
       _$TagListCopyWithImpl<$Res>;
-
   $Res call({List<String> tags});
 }
 
@@ -41,7 +39,6 @@ class _$TagListCopyWithImpl<$Res> implements $TagListCopyWith<$Res> {
   _$TagListCopyWithImpl(this._value, this._then);
 
   final TagList _value;
-
   // ignore: unused_field
   final $Res Function(TagList) _then;
 
@@ -63,7 +60,6 @@ abstract class _$$_TagListCopyWith<$Res> implements $TagListCopyWith<$Res> {
   factory _$$_TagListCopyWith(
           _$_TagList value, $Res Function(_$_TagList) then) =
       __$$_TagListCopyWithImpl<$Res>;
-
   @override
   $Res call({List<String> tags});
 }
@@ -99,7 +95,6 @@ class _$_TagList with DiagnosticableTreeMixin implements _TagList {
       _$$_TagListFromJson(json);
 
   final List<String> _tags;
-
   @override
   @JsonKey()
   List<String> get tags {
@@ -153,7 +148,6 @@ abstract class _TagList implements TagList {
 
   @override
   List<String> get tags;
-
   @override
   @JsonKey(ignore: true)
   _$$_TagListCopyWith<_$_TagList> get copyWith =>
@@ -169,7 +163,6 @@ mixin _$CatList {
   List<Cat> get cats => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CatListCopyWith<CatList> get copyWith => throw _privateConstructorUsedError;
 }
@@ -178,7 +171,6 @@ mixin _$CatList {
 abstract class $CatListCopyWith<$Res> {
   factory $CatListCopyWith(CatList value, $Res Function(CatList) then) =
       _$CatListCopyWithImpl<$Res>;
-
   $Res call({List<Cat> cats});
 }
 
@@ -187,7 +179,6 @@ class _$CatListCopyWithImpl<$Res> implements $CatListCopyWith<$Res> {
   _$CatListCopyWithImpl(this._value, this._then);
 
   final CatList _value;
-
   // ignore: unused_field
   final $Res Function(CatList) _then;
 
@@ -209,7 +200,6 @@ abstract class _$$_CatListCopyWith<$Res> implements $CatListCopyWith<$Res> {
   factory _$$_CatListCopyWith(
           _$_CatList value, $Res Function(_$_CatList) then) =
       __$$_CatListCopyWithImpl<$Res>;
-
   @override
   $Res call({List<Cat> cats});
 }
@@ -245,7 +235,6 @@ class _$_CatList with DiagnosticableTreeMixin implements _CatList {
       _$$_CatListFromJson(json);
 
   final List<Cat> _cats;
-
   @override
   @JsonKey()
   List<Cat> get cats {
@@ -299,7 +288,6 @@ abstract class _CatList implements CatList {
 
   @override
   List<Cat> get cats;
-
   @override
   @JsonKey(ignore: true)
   _$$_CatListCopyWith<_$_CatList> get copyWith =>
@@ -313,13 +301,10 @@ Cat _$CatFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Cat {
   String get id => throw _privateConstructorUsedError;
-
   DateTime get createdAt => throw _privateConstructorUsedError;
-
   List<String> get tags => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CatCopyWith<Cat> get copyWith => throw _privateConstructorUsedError;
 }
@@ -328,7 +313,6 @@ mixin _$Cat {
 abstract class $CatCopyWith<$Res> {
   factory $CatCopyWith(Cat value, $Res Function(Cat) then) =
       _$CatCopyWithImpl<$Res>;
-
   $Res call({String id, DateTime createdAt, List<String> tags});
 }
 
@@ -337,7 +321,6 @@ class _$CatCopyWithImpl<$Res> implements $CatCopyWith<$Res> {
   _$CatCopyWithImpl(this._value, this._then);
 
   final Cat _value;
-
   // ignore: unused_field
   final $Res Function(Cat) _then;
 
@@ -368,7 +351,6 @@ class _$CatCopyWithImpl<$Res> implements $CatCopyWith<$Res> {
 abstract class _$$_CatCopyWith<$Res> implements $CatCopyWith<$Res> {
   factory _$$_CatCopyWith(_$_Cat value, $Res Function(_$_Cat) then) =
       __$$_CatCopyWithImpl<$Res>;
-
   @override
   $Res call({String id, DateTime createdAt, List<String> tags});
 }
@@ -421,7 +403,6 @@ class _$_Cat with DiagnosticableTreeMixin implements _Cat {
   @override
   final DateTime createdAt;
   final List<String> _tags;
-
   @override
   List<String> get tags {
     // ignore: implicit_dynamic_type
@@ -484,13 +465,10 @@ abstract class _Cat implements Cat {
 
   @override
   String get id;
-
   @override
   DateTime get createdAt;
-
   @override
   List<String> get tags;
-
   @override
   @JsonKey(ignore: true)
   _$$_CatCopyWith<_$_Cat> get copyWith => throw _privateConstructorUsedError;

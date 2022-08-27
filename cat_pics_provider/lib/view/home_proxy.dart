@@ -1,7 +1,7 @@
 import 'package:breakpoints_mq/breakpoints_mq.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cat_pics_provider/logic/cats_by_tabs_notifier.dart';
-import 'package:cat_pics_provider/model/response.dart';
+import 'package:cat_pics_provider/model/cat_ext.dart';
 import 'package:cat_pics_provider/view/tag.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

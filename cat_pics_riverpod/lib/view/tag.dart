@@ -1,6 +1,7 @@
 import 'package:breakpoints_mq/breakpoints_mq.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cat_pics_riverpod/logic/cataas_service.dart';
+import 'package:cat_pics_riverpod/model/cat_ext.dart';
 import 'package:cat_pics_riverpod/model/response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
