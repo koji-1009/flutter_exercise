@@ -4,6 +4,12 @@ import 'package:cat_pics_riverpod/model/response.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
+final cataasServiceProvider = Provider(
+      (_) => CataasService(
+    client: http.Client(),
+  ),
+);
+
 const _authority = 'cataas.com';
 const _pathCats = 'api/cats';
 const _pathTags = 'api/tags';
