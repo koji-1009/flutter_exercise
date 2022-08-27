@@ -1,6 +1,6 @@
+import 'package:cat_pics_stateful/logic/cataas_service.dart';
 import 'package:cat_pics_stateful/view/api_request.dart';
 import 'package:cat_pics_stateful/view/home.dart';
-import 'package:cat_pics_stateful/logic/cataas_service.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
