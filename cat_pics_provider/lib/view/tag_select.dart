@@ -32,13 +32,15 @@ class TagSelectPage extends StatelessWidget {
           );
         }
 
+        final tags = data.tags;
         return Scaffold(
           appBar: AppBar(
             title: const Text('Select tags'),
           ),
           body: ListView.builder(
+            itemCount: tags.length,
             itemBuilder: (context, index) {
-              final tag = data.tags[index];
+              final tag = tags[index];
               if (tag.isEmpty) {
                 return const SizedBox.shrink();
               }

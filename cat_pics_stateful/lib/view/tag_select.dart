@@ -43,6 +43,7 @@ class _TagSelectPageState extends State<TagSelectPage> {
           );
         }
 
+        final tags = data.tags;
         return WillPopScope(
           onWillPop: () async {
             // return selected tags
@@ -54,8 +55,9 @@ class _TagSelectPageState extends State<TagSelectPage> {
               title: const Text('Select tags'),
             ),
             body: ListView.builder(
+              itemCount: tags.length,
               itemBuilder: (context, index) {
-                final tag = data.tags[index];
+                final tag = tags[index];
                 if (tag.isEmpty) {
                   return const SizedBox.shrink();
                 }
