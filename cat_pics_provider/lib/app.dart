@@ -1,7 +1,7 @@
 import 'package:cat_pics_provider/logic/cataas_service.dart';
+import 'package:cat_pics_provider/logic/cats_by_tabs_notifier.dart';
 import 'package:cat_pics_provider/logic/home_tab_state.dart';
 import 'package:cat_pics_provider/logic/select_tags_notifier.dart';
-import 'package:cat_pics_provider/logic/cats_by_tabs_notifier.dart';
 import 'package:cat_pics_provider/view/error.dart';
 import 'package:cat_pics_provider/view/home.dart';
 import 'package:cat_pics_provider/view/tag.dart';
