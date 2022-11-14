@@ -30,28 +30,32 @@ mixin _$TagList {
 /// @nodoc
 abstract class $TagListCopyWith<$Res> {
   factory $TagListCopyWith(TagList value, $Res Function(TagList) then) =
-      _$TagListCopyWithImpl<$Res>;
+      _$TagListCopyWithImpl<$Res, TagList>;
+  @useResult
   $Res call({List<String> tags});
 }
 
 /// @nodoc
-class _$TagListCopyWithImpl<$Res> implements $TagListCopyWith<$Res> {
+class _$TagListCopyWithImpl<$Res, $Val extends TagList>
+    implements $TagListCopyWith<$Res> {
   _$TagListCopyWithImpl(this._value, this._then);
 
-  final TagList _value;
   // ignore: unused_field
-  final $Res Function(TagList) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tags = freezed,
+    Object? tags = null,
   }) {
     return _then(_value.copyWith(
-      tags: tags == freezed
+      tags: null == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -61,24 +65,24 @@ abstract class _$$_TagListCopyWith<$Res> implements $TagListCopyWith<$Res> {
           _$_TagList value, $Res Function(_$_TagList) then) =
       __$$_TagListCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<String> tags});
 }
 
 /// @nodoc
-class __$$_TagListCopyWithImpl<$Res> extends _$TagListCopyWithImpl<$Res>
+class __$$_TagListCopyWithImpl<$Res>
+    extends _$TagListCopyWithImpl<$Res, _$_TagList>
     implements _$$_TagListCopyWith<$Res> {
   __$$_TagListCopyWithImpl(_$_TagList _value, $Res Function(_$_TagList) _then)
-      : super(_value, (v) => _then(v as _$_TagList));
+      : super(_value, _then);
 
-  @override
-  _$_TagList get _value => super._value as _$_TagList;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tags = freezed,
+    Object? tags = null,
   }) {
     return _then(_$_TagList(
-      tags: tags == freezed
+      tags: null == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -130,6 +134,7 @@ class _$_TagList with DiagnosticableTreeMixin implements _TagList {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TagListCopyWith<_$_TagList> get copyWith =>
       __$$_TagListCopyWithImpl<_$_TagList>(this, _$identity);
 
@@ -170,28 +175,32 @@ mixin _$CatList {
 /// @nodoc
 abstract class $CatListCopyWith<$Res> {
   factory $CatListCopyWith(CatList value, $Res Function(CatList) then) =
-      _$CatListCopyWithImpl<$Res>;
+      _$CatListCopyWithImpl<$Res, CatList>;
+  @useResult
   $Res call({List<Cat> cats});
 }
 
 /// @nodoc
-class _$CatListCopyWithImpl<$Res> implements $CatListCopyWith<$Res> {
+class _$CatListCopyWithImpl<$Res, $Val extends CatList>
+    implements $CatListCopyWith<$Res> {
   _$CatListCopyWithImpl(this._value, this._then);
 
-  final CatList _value;
   // ignore: unused_field
-  final $Res Function(CatList) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cats = freezed,
+    Object? cats = null,
   }) {
     return _then(_value.copyWith(
-      cats: cats == freezed
+      cats: null == cats
           ? _value.cats
           : cats // ignore: cast_nullable_to_non_nullable
               as List<Cat>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -201,24 +210,24 @@ abstract class _$$_CatListCopyWith<$Res> implements $CatListCopyWith<$Res> {
           _$_CatList value, $Res Function(_$_CatList) then) =
       __$$_CatListCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Cat> cats});
 }
 
 /// @nodoc
-class __$$_CatListCopyWithImpl<$Res> extends _$CatListCopyWithImpl<$Res>
+class __$$_CatListCopyWithImpl<$Res>
+    extends _$CatListCopyWithImpl<$Res, _$_CatList>
     implements _$$_CatListCopyWith<$Res> {
   __$$_CatListCopyWithImpl(_$_CatList _value, $Res Function(_$_CatList) _then)
-      : super(_value, (v) => _then(v as _$_CatList));
+      : super(_value, _then);
 
-  @override
-  _$_CatList get _value => super._value as _$_CatList;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cats = freezed,
+    Object? cats = null,
   }) {
     return _then(_$_CatList(
-      cats: cats == freezed
+      cats: null == cats
           ? _value._cats
           : cats // ignore: cast_nullable_to_non_nullable
               as List<Cat>,
@@ -270,6 +279,7 @@ class _$_CatList with DiagnosticableTreeMixin implements _CatList {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CatListCopyWith<_$_CatList> get copyWith =>
       __$$_CatListCopyWithImpl<_$_CatList>(this, _$identity);
 
@@ -312,38 +322,41 @@ mixin _$Cat {
 /// @nodoc
 abstract class $CatCopyWith<$Res> {
   factory $CatCopyWith(Cat value, $Res Function(Cat) then) =
-      _$CatCopyWithImpl<$Res>;
+      _$CatCopyWithImpl<$Res, Cat>;
+  @useResult
   $Res call({String id, DateTime createdAt, List<String> tags});
 }
 
 /// @nodoc
-class _$CatCopyWithImpl<$Res> implements $CatCopyWith<$Res> {
+class _$CatCopyWithImpl<$Res, $Val extends Cat> implements $CatCopyWith<$Res> {
   _$CatCopyWithImpl(this._value, this._then);
 
-  final Cat _value;
   // ignore: unused_field
-  final $Res Function(Cat) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdAt = freezed,
-    Object? tags = freezed,
+    Object? id = null,
+    Object? createdAt = null,
+    Object? tags = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      tags: tags == freezed
+      tags: null == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -352,34 +365,33 @@ abstract class _$$_CatCopyWith<$Res> implements $CatCopyWith<$Res> {
   factory _$$_CatCopyWith(_$_Cat value, $Res Function(_$_Cat) then) =
       __$$_CatCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, DateTime createdAt, List<String> tags});
 }
 
 /// @nodoc
-class __$$_CatCopyWithImpl<$Res> extends _$CatCopyWithImpl<$Res>
+class __$$_CatCopyWithImpl<$Res> extends _$CatCopyWithImpl<$Res, _$_Cat>
     implements _$$_CatCopyWith<$Res> {
   __$$_CatCopyWithImpl(_$_Cat _value, $Res Function(_$_Cat) _then)
-      : super(_value, (v) => _then(v as _$_Cat));
+      : super(_value, _then);
 
-  @override
-  _$_Cat get _value => super._value as _$_Cat;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdAt = freezed,
-    Object? tags = freezed,
+    Object? id = null,
+    Object? createdAt = null,
+    Object? tags = null,
   }) {
     return _then(_$_Cat(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      tags: tags == freezed
+      tags: null == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -429,21 +441,20 @@ class _$_Cat with DiagnosticableTreeMixin implements _Cat {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Cat &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
             const DeepCollectionEquality().equals(other._tags, _tags));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(_tags));
+      runtimeType, id, createdAt, const DeepCollectionEquality().hash(_tags));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CatCopyWith<_$_Cat> get copyWith =>
       __$$_CatCopyWithImpl<_$_Cat>(this, _$identity);
 
